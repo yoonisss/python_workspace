@@ -1,0 +1,29 @@
+score = int(input("점수를 입력하세요 : "))
+
+if score >= 90 :
+    print("A+")
+
+else :
+    if score >= 90 :
+        print("A0")
+    else :
+        if score >= 85 :
+            print("B+")
+        else :
+            if score >= 80:
+                print("B0")
+            else :
+                print("C+")
+                if score >= 75 :
+                    print("C0")
+                else :
+                    if score >= 70 :
+                        print("D+")
+                    else :
+                        print("D0")
+                        if score >= 65 :
+                           print("F")
+                  
+                
+
+print("학점입니다. ^^")
