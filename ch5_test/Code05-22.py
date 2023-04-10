@@ -2,7 +2,7 @@ inFp, outFp = None, None
 inStr = ""
 
 inFp = open("C:/Windows/win.ini", "r")
-outFp = open("C:/Temp/data3.txt", "w")
+outFp = open("text/data3.txt", "w")
 
 inList = inFp.readlines()
 for inStr in inList :

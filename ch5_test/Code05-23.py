@@ -2,7 +2,7 @@ inFp, outFp = None, None
 inStr = ""
 
 inFp = open("C:/Windows/write.exe", "rb")
-outFp = open("C:/Temp/write.exe", "wb")
+outFp = open("text/write.exe", "wb")
 
 while True :
     inStr = inFp.read(1)

@@ -1,7 +1,7 @@
 outFp = None 
 outStr = ""
-
-outFp = open("C:/Temp/data2.txt", "w")
+# inFp = open("test.txt", "r", encoding="utf-8")
+outFp = open("text/data2.txt", "w")
 
 while True:
     outStr = input("내용 입력 : ")

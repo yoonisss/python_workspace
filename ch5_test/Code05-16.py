@@ -5,10 +5,11 @@ from tkinter.filedialog import *
 def func_open() :
     filename = askopenfilename(parent = window, filetypes = (("GIF 파일", "*.gif"), ("모든 파일", "*.*")))
     photo = PhotoImage(file = filename)
+    photo2 = PhotoImage(file = filename)
     print("사진의 크기 가로 세로 크기 : %d x %d" %(photo.width(), photo.height()))
     #print("사진의 0,0 의 좌표의 RGB값을 튜플로 보자. %s :" % photo.get(0,0))
-    print(photo.get(0,0))
-    a = (photo.get(0,0))
+    # print(photo.get(0,0))
+    # a = (photo.get(0,0))
     
     # for i in range(0,photo.width()) :
     #     imgList = []
@@ -19,17 +20,19 @@ def func_open() :
     #     imgList.append(tmpList)
     
     
-    # width = photo.width()
-    # height = photo.height()
+    width = photo.width()
+    height = photo.height()
 
-    # for i in range(height) :
-    #     for k in range(width) :
-    #         r, g, b = photo.get(k, i)
-    #         grey = int((r+g+b)/3)
-    #         photo.put("#%02x%02x%02x" % (grey, grey, grey), (k, i))
+    for i in range(height) :
+        for k in range(width) :
+            r, g, b = photo.get(k, i)
+            grey = int((r+g+b)/3)
+            photo.put("#%02x%02x%02x" % (grey, grey, grey), (k, i))
 
-    # pLabel.configure(image = photo)
-    # pLabel.image = photo
+    pLabel.configure(image = photo)
+    pLabel.image = photo
+    pLabel2.configure(image = photo)
+    pLabel2.image = photo2
 
 def func_exit() :
     window.quit()
@@ -41,8 +44,12 @@ window.geometry("500x500")
 window.title("명화 감상하기")
 
 photo = PhotoImage()
+photo2 = PhotoImage()
+
 pLabel = Label(window, image = photo)
-pLabel.pack(expand=1, anchor = CENTER)
+pLabel.pack(expand=1, anchor = E)
+pLabel2 = Label(window, image = photo)
+pLabel2.pack(expand=1, anchor = W)
 
 mainMenu = Menu(window)
 window.config(menu = mainMenu)
