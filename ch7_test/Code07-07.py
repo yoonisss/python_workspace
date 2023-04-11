@@ -2,12 +2,12 @@ import xlwt
 import csv
 import os
 
-csvFileList = ["C:/CookAnalysis/CSV/singerA.csv", "C:/CookAnalysis/CSV/singerB.csv"]
+csvFileList = ["CSV/singerA.csv", "CSV/singerB.csv"]
 outWorkbook = xlwt.Workbook()
 
 for csvFileName in csvFileList :
     rowCount = 0
-    with open(csvFileName, "r") as inFp:
+    with open(csvFileName, "r", encoding='cp949') as inFp:
         csvReader = csv.reader(inFp)
         header_list = next(csvReader)
         outSheet = outWorkbook.add_sheet(os.path.basename(csvFileName))
@@ -21,5 +21,5 @@ for csvFileName in csvFileList :
                 else :
                     outSheet.write(rowCount, col, row_list[col])
 
-outWorkbook.save('c:/CookAnalysis/Excel/singerCSV.xls')
+outWorkbook.save('Excel/singerCSV2-1.xls')
 print("Save. OK~")

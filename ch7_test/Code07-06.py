@@ -1,11 +1,11 @@
 import xlrd
 import csv
 
-workbook = xlrd.open_workbook('c:/CookAnalysis/Excel/singer.xls')
+workbook = xlrd.open_workbook('Excel/singer.xls')
 
 wsheetList = workbook.sheets()
 for worksheet in wsheetList :
-    with open("C:/CookAnalysis/Excel/singer_" + worksheet.name + ".csv", "w", newline='') as outFp:
+    with open("Excel/singer_2-" + worksheet.name + ".csv", "w", encoding='utf-8', newline='') as outFp:
         csvWriter = csv.writer(outFp)
         for row in range(worksheet.nrows) :
                 row_list = worksheet.row_values(row)

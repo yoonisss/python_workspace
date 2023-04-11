@@ -1,7 +1,7 @@
 from tkinter import *
 
 window = Tk()
-photo = PhotoImage(file = 'C:/CookAnalysis/GIF/pic7.gif')
+photo = PhotoImage(file = 'GIF/pic7.gif')
 h = photo.height()
 w = photo.width()
 print('이미지 크기 : ', h, 'x', w)
