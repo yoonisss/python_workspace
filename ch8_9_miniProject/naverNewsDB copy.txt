@@ -1,0 +1,11 @@
+create database HTitemDB;
+use HTitemDB;
+select*from itemsTable;
+CREATE TABLE `HTitemDB`.`itemsTable` (
+  `pName` VARCHAR(100) NOT NULL,
+  `pCompany` VARCHAR(50) NULL,
+  `fPrice` VARCHAR(20) NULL,
+  `disRate` VARCHAR(10) NULL,
+  `oriPrice` VARCHAR(50) NULL,
+  `itemsImgUrl` VARCHAR(200) NULL,
+  PRIMARY KEY (`pName`));
